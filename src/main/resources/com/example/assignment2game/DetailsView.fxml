@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.geometry.Insets?>
+
+<!-- Main container for the details view, using a ScrollPane for scrollable content -->
+<ScrollPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2game.DetailsController" fitToWidth="true">
+    <VBox alignment="CENTER" spacing="10.0" styleClass="details-view">
+        <!-- Padding around the VBox container -->
+        <padding>
+            <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+        </padding>
+
+        <!-- ImageView to display the game image -->
+        <ImageView fx:id="gameImageView" fitHeight="400.0" fitWidth="600.0" styleClass="image-view"/>
+
+        <!-- Labels to display game details -->
+        <Label fx:id="gameNameLabel" styleClass="label" />
+        <Label fx:id="gameCompanyLabel" styleClass="label" />
+        <Label fx:id="gameReleaseYearLabel" styleClass="label" />
+        <Label fx:id="gameGenresLabel" styleClass="label" />
+        <Label fx:id="gameRatingLabel" styleClass="label" />
+        <Label fx:id="gamePlatformsLabel" styleClass="label" />
+        <Label fx:id="gameWebsiteLabel" styleClass="label" />
+
+        <!-- Label to display the game description with text wrapping and maximum width -->
+        <Label fx:id="gameDescriptionLabel" wrapText="true" maxWidth="800" styleClass="label"/> <!-- Ensure text wraps -->
+
+        <!-- Button to go back to the previous view -->
+        <Button text="Back" onAction="#goBack" styleClass="button"/>
+    </VBox>
+</ScrollPane>
